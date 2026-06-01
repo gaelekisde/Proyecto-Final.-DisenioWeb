@@ -1,0 +1,113 @@
+CÓMO FUNCIONA EL CSS RESPONSIVO Y SUS BREAKPOINTS
+===================================================
+
+1. ¿QUÉ ES EL CSS RESPONSIVO?
+-----------------------------
+Es una técnica de diseño web que permite que una página se vea
+correctamente en diferentes tamaños de pantalla (escritorio, tablet,
+móvil). Se logra principalmente con:
+
+  - Media Queries  ->  Reglas CSS que se activan según el tamaño
+                       de la pantalla.
+  - Unidades relativas  ->  %, vw, vh, rem, em, clamp().
+  - Flexbox / Grid  ->  Layouts que se adaptan automáticamente.
+  - Imágenes flexibles  ->  max-width: 100%.
+
+
+2. BREAKPOINTS (PUNTOS DE RUPTURA)
+-----------------------------------
+Son los anchos de pantalla donde el diseño cambia para adaptarse.
+
+Breakpoints usados en styles.css:
+
+  A) MÓVIL (por defecto / sin media query)
+     Rango: 0px - 480px
+     - El navegador empieza con estos estilos base.
+     - Nav oculto (< 480px), se muestra al hacer clic en ☰.
+     - Columnas: 1 en datos-rapidos, 2 en rejilla-galeria.
+     - Logo más pequeño (35px).
+
+  B) TABLET (@media min-width: 481px)
+     Rango: 481px - 1023px
+     - Nav sigue oculto en algunos casos.
+     - .contacto-aside se convierte en grid (2 columnas).
+     - Logo más grande (55px).
+     - rejilla-galeria cambia a 3 columnas.
+     - rejilla-perfiles: 2 columnas.
+     - .perfil-egreso ocupa las 2 columnas.
+
+  C) ESCRITORIO (@media min-width: 1024px)
+     Rango: 1024px en adelante
+     - Header en fila (logo a la izquierda, nav a la derecha).
+     - Nav visible siempre, en horizontal.
+     - Menú hamburguesa (☰) oculto.
+     - Logo grande (90px).
+     - aside flota a la derecha (float: right).
+     - rejilla-galeria: 3 columnas.
+     - .perfil-egreso: texto en 2 columnas.
+
+
+3. CÓMO FUNCIONAN LAS MEDIA QUERIES
+-------------------------------------
+Sintaxis:
+
+  @media (min-width: Xpx) {
+      /* estilos que se aplican DESDE Xpx en adelante */
+  }
+
+  @media (max-width: Ypx) {
+      /* estilos que se aplican HASTA Ypx */
+  }
+
+Ejemplo del proyecto:
+
+  /* MÓVIL: estilos base fuera de media query */
+
+  .rejilla-galeria {
+      column-count: 2;   /* 2 columnas en móvil */
+  }
+
+  /* TABLET: desde 481px */
+  @media (min-width: 481px) {
+      .datos-rapidos {
+          grid-template-columns: repeat(2, 1fr);
+      }
+      .rejilla-galeria {
+          column-count: 3;
+      }
+  }
+
+  /* ESCRITORIO: desde 1024px */
+  @media (min-width: 1024px) {
+      .header-container {
+          flex-direction: row;
+      }
+      nav {
+          display: flex;
+      }
+  }
+
+
+4. OTRAS TÉCNICAS RESPONSIVAS USADAS
+--------------------------------------
+  a) clamp()  ->  Tamaños que crecen con la pantalla.
+     Ej: font-size: clamp(1rem, 3vw, 3rem);
+     (mínimo 1rem, ideal 3vw, máximo 3rem)
+
+  b) Grid con auto-fit  ->  Columnas que se ajustan solas.
+     Ej: grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+
+  c) Unidades relativas:
+     - %  ->  Porcentaje del contenedor padre.
+     - vw / vh  ->  Porcentaje del viewport.
+     - rem  ->  Relativo al tamaño de fuente raíz.
+
+  d) max-width: 100% en imágenes para que nunca se desborden.
+
+
+5. REGLA GENERAL: MOBILE FIRST
+-------------------------------
+Se escriben primero los estilos para móvil (sin media query)
+y luego se añaden media queries con min-width para pantallas
+más grandes. Así el diseño base funciona en cualquier dispositivo
+y solo se mejoran los estilos cuando hay más espacio.
