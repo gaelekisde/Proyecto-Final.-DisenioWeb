@@ -450,12 +450,15 @@ footer {
     align-items: center;
     text-align: center;
     justify-self: center;
-    width: min(100%, 900px);
+    width: min(95%, 800px);
 }
 
 .perfil-egreso ol {
     padding-left: 1.5rem;
     margin: 0.5rem 0;
+    width: 100%;
+    max-width: 100%;
+    text-align: left;
 }
 
 .perfil-egreso ol li {
