@@ -1,0 +1,19 @@
+Perfil de Egreso 
+1. Implementa aplicaciones computacionales para solucionar problemas de diversos contextos, 
+integrando diferentes tecnologías, plataformas o dispositivos. 
+2. Diseña, desarrolla y aplica modelos computacionales para solucionar problemas, mediante la 
+selección y uso de herramientas matemáticas. 
+3. Diseña e implementa interfaces para la automatización de sistemas de hardware y desarrollo del 
+software asociado. 
+4. Coordina y participa en equipos multidisciplinarios para la aplicación de soluciones innovadoras en 
+diferentes contextos. 
+5. Diseña, implementa y administra bases de datos optimizando los recursos disponibles, conforme a 
+las normas vigentes de manejo y seguridad de la información. 
+6. Desarrolla y administra software para apoyar la productividad y competitividad de las 
+organizaciones cumpliendo con estándares de calidad. 
+7. Evalúa tecnologías de hardware para soportar aplicaciones de manera efectiva. 
+8. Detecta áreas de oportunidad empleando una visión empresarial para crear proyectos aplicando las 
+Tecnologías de la Información y Comunicación. 
+9. Diseña, configura y administra redes de computadoras para crear soluciones de conectividad en la 
+organización, aplicando las normas y estándares vigentes.
+

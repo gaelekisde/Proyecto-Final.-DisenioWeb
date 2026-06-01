@@ -1,0 +1,45 @@
+Micrositio de Ingeniería en Sistemas Computacionales
+
+Objetivo:
+
+El alumno diseñará y desarrollará un micrositio web informativo para la carrera de Ingeniería en Sistemas Computacionales del TecNM Campus Región Carbonífera. El sitio debe representar la identidad de la carrera, contener información real y ser funcional en dispositivos de escritorio y móvil.
+
+
+Requisitos técnicos
+
+HTML5 semántico
+
+• Uso obligatorio de: <header>, <nav>, <main>, <section>, <article>, <aside>, <footer>
+
+• Un solo <h1> por página, jerarquía correcta de encabezados
+
+
+CSS3 sin frameworks
+
+• Prohibido: Bootstrap, Tailwind, Foundation o cualquier framework CSS
+
+• Estilos en archivos .css externos, no en atributos style=
+
+• Se recomienda uso de variables CSS (--color-primario, --fuente-base, etc.)
+
+
+Diseño responsive
+
+• Obligatorio: metaetiqueta viewport
+
+• Tres breakpoints: escritorio (1024px+), tablet (481–1023px), móvil (≤480px)
+
+• Flexbox y/o CSS Grid para maquetación
+
+
+Forma de evaluación
+
+La calificación del trabajo final se integra con dos componentes: la evaluación técnica realizada por el docente y la evaluación estética realizada por el grupo durante la exposición. En diseño web el resultado visual es el producto final que el usuario experimenta, por lo que la estética tiene mayor peso.
+
+
+
+. Formato de entrega
+
+· Carpeta comprimida en .zip con todos los archivos y subcarpetas.
+
+· El archivo principal debe llamarse index.html.

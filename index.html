@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="es-MX">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TecNM ISC | Inicio</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+      <div class="header-container">
+        <div class="header-mobile">
+            <div class="logo">
+                <img class="logo-imagen" src="imgs/logo sistemas.jpg" alt="Logo TecNM">
+                <div class="logo-texto">
+                    <strong class="titulo-sitio">Ingeniería en Sistemas Computacionales</strong>
+                    <small class="subtitulo-sitio">TecNM Campus Región Carbonífera</small>
+                </div>
+            </div>
+            <label for="menu">☰</label>
+        </div>
+        <input type="checkbox" id="menu">
+        <nav>
+            <ul>
+                <li><a href="index.html" class="activo">Inicio</a></li>
+                <li><a href="info.html">Información</a></li>
+                <li><a href="perfiles.html">Perfiles</a></li>
+                <li><a href="galeria.html">Galería</a></li>
+                <li><a href="aprendizaje.html">Aprendizaje</a></li>
+                <li><a href="reseñas.html">Reseñas</a></li>
+            </ul>
+        </nav>
+      </div>
+    </header>
+    <main>
+        <section class="hero">
+            <h1>Bienvenido al programa de ISC</h1>
+            <p>Descubre una formación orientada a la innovación, la programación y las soluciones digitales.</p>
+            <p>Estudia en modalidad presencial o semipresencial y prepara tu futuro profesional.</p>
+        </section>
+        <section class="datos">
+            <h2>Datos clave</h2>
+            <div class="datos-rapidos">
+                <article>
+                    <div><img src="icons/icons8-reloj-50.png" alt="Duración"></div>
+                    <h3>Duración</h3>
+                    <p>9 semestres con proyectos prácticos y formación profesional.</p>
+                </article>
+                <article>
+                    <div><img src="icons/icons8-campo-50.png" alt="Campo laboral"></div>
+                    <h3>Campo laboral</h3>
+                    <p>Desarrollo de software, redes, bases de datos, inteligencia artificial y consultoría tecnológica.</p>
+                </article>
+                <article>
+                    <div><img src="icons/icons8-hombre-modalidad-retrato-64.png" alt="Modalidad"></div>
+                    <h3>Modalidad</h3>
+                    <p>Presencial y semipresencial, con apoyo académico y práctica constante.</p>
+                </article>
+                <article>
+                    <div><img src="icons/icons8-campus-64.png" alt="Campus"></div>
+                    <h3>Campus</h3>
+                    <p>TecNM Región Carbonífera, con laboratorios y espacios colaborativos.</p>
+                </article>
+            </div>
+        </section>
+        <div class="contacto-aside">
+            <section class="contacto" id="contacto">
+                <h2>Contáctanos</h2>
+                <form>
+                    <fieldset>
+                        <legend>Escríbenos</legend>
+                        <label for="nombre">Nombre:</label>
+                        <input type="text" id="nombre" name="nombre" required>
+                        <label for="email">Correo electrónico:</label>
+                        <input type="email" id="email" name="email" required>
+                        <label for="mensaje">Mensaje:</label>
+                        <textarea id="mensaje" name="mensaje" required></textarea>
+                        <div class="grupo-botones">
+                            <button type="submit">Enviar mensaje</button>
+                            <button type="reset">Borrar</button>
+                        </div>
+                    </fieldset>
+                </form>
+            </section>
+            <aside>
+                <h2>Conoce el campus</h2>
+                <p>El TecNM Región Carbonífera ofrece laboratorios modernos y un entorno de aprendizaje colaborativo para impulsar tu formación en sistemas computacionales.</p>
+            </aside>
+        </div>
+    </main>
+    <footer>
+        <p>&copy; 2024 TecNM Campus Región Carbonífera. Todos los derechos reservados.</p>
+    </footer>
+</body>
+</html>
