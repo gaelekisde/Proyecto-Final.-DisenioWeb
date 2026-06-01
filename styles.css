@@ -21,18 +21,6 @@ html, body {
     min-height: 100vh;
 }
 
-body {
-    display: flex;
-    flex-direction: column;
-}
-
-main {
-    flex: 1 0 auto;
-}
-
-footer {
-    flex-shrink: 0;
-}
 
 img {
     width: 100%;
