@@ -502,7 +502,7 @@ td {
     font-size: clamp(0.8rem, 1.5vw, 0.95rem);
 }
 
-tr:nth-child(3) td {
+tr:nth-child(2) td, tr:nth-child(4) td {
     background-color: var(--gris-claro);
 }
 
@@ -542,6 +542,11 @@ tr:last-child td {
     transform: translateY(-4px);
     box-shadow: 0 8px 20px var(--sombra);
 }
+
+.aprendizaje-redes { border-top-color: #2563EB; }
+.aprendizaje-programacion { border-top-color: #059669; }
+.aprendizaje-iot { border-top-color: #D97706; }
+.aprendizaje-habilidades { border-top-color: #C9783E; }
 
 .categoria-aprendizaje h2 {
     border-bottom: 2px solid var(--gris-claro);
@@ -629,11 +634,9 @@ tr:last-child td {
     padding: 0.5rem 1rem 1rem;
     max-width: 1400px;
     margin: 0 auto;
-    place-items: center;
 }
 
 .contenedor-galeria figure {
-    break-inside: avoid;
     margin: 0 0 1.2rem;
     background: var(--blanco);
     border-radius: 16px;
@@ -841,7 +844,6 @@ section > article p {
         display: inline-block;
         padding: 0.4rem 0.5rem;
         border-bottom: none;
-        white-space: nowrap;
     }
     .datos-rapidos {
         grid-template-columns: repeat(4, 1fr);
