@@ -100,7 +100,7 @@ header {
     font-weight: 700;
     margin: 0;
     font-family: var(--titulos);
-    display: block;
+
 }
 
 .subtitulo-sitio {
@@ -284,12 +284,11 @@ legend {
     display: flex;
     flex-direction: column;
     gap: 0.5rem;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    transition: transform 0.3s ease;
 }
 
 .contenedor-info article:hover {
     transform: translateY(-4px);
-    box-shadow: 0 8px 20px var(--sombra);
 }
 
 .contenedor-info article p {
@@ -297,7 +296,6 @@ legend {
 }
 .elegirnos-texto {
     font-size: clamp(0.9rem, 1.8vw, 1.1rem);
-    line-height: 1.5;
     color: var(--gris-oscuro);
 }
 /* contacto */
@@ -344,8 +342,6 @@ legend {
     padding: 0.75rem;
     border-radius: 10px;
     font-size: 1rem;
-    cursor: pointer;
-
 }
 .grupo-botones {
     display: flex;
@@ -449,6 +445,12 @@ footer {
 .perfil-egreso {
     border-top: 1px solid var(--verde-militar);
     background: var(--blanco);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    justify-self: center;
+    width: min(100%, 900px);
 }
 
 .perfil-egreso ol {
@@ -458,7 +460,6 @@ footer {
 
 .perfil-egreso ol li {
     margin-bottom: 0.7rem;
-    break-inside: avoid;
 }
 
 /* tabla */
@@ -470,7 +471,6 @@ footer {
 
 table {
     width: 100%;
-    border-collapse: collapse;
     background-color: var(--blanco);
     border-radius: 12px;
     box-shadow: 0 4px 12px var(--sombra);
@@ -482,7 +482,6 @@ caption {
     color: var(--verde-militar);
     font-weight: 600;
     padding: 0.8rem;
-    caption-side: top;
     text-align: center;
 }
 
@@ -503,7 +502,7 @@ td {
     font-size: clamp(0.8rem, 1.5vw, 0.95rem);
 }
 
-tr:nth-child(even) td {
+tr:nth-child(3) td {
     background-color: var(--gris-claro);
 }
 
@@ -557,7 +556,6 @@ tr:last-child td {
     font-size: clamp(0.7rem, 1.2vw, 0.85rem);
     font-weight: 400;
     color: var(--gris-oscuro);
-    display: block;
     margin-top: 0.2rem;
 }
 
@@ -572,6 +570,8 @@ tr:last-child td {
     border-radius: 12px;
     padding: 1rem 1.2rem;
     transition: background-color 0.3s ease;
+    display: flex;
+    flex-direction: column;
 }
 
 .tarjeta-tecnologia:hover {
@@ -590,37 +590,46 @@ tr:last-child td {
     margin: 0 0 0.5rem;
 }
 
-.dificultad {
-    display: inline-block;
-    font-size: 0.8rem;
-    font-weight: 600;
-    padding: 0.2rem 0.6rem;
-    border-radius: 20px;
-    font-family: var(--texto);
+.dificultad-basico, .dificultad-intermedio, .dificultad-avanzado {
+    align-self: flex-end;
+    padding: 0.2rem 0.5rem;
+    
 }
-
-.dificultad.basico {
+.dificultad-basico {
     background-color: #D1FAE5;
     color: #065F46;
 }
 
-.dificultad.intermedio {
+.dificultad-intermedio {
     background-color: #FEF9C3;
     color: #854D0E;
 }
 
-.dificultad.avanzado {
+.dificultad-avanzado {
     background-color: #FECACA;
     color: #7F1D1D;
 }
 
 /* galería */
+@keyframes aparecer {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
 .contenedor-galeria {
-    column-count: 3;
-    column-gap: 1.2rem;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.2rem;
     padding: 0.5rem 1rem 1rem;
     max-width: 1400px;
     margin: 0 auto;
+    place-items: center;
 }
 
 .contenedor-galeria figure {
@@ -630,7 +639,18 @@ tr:last-child td {
     border-radius: 16px;
     box-shadow: 0 2px 8px var(--sombra);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    animation: aparecer 0.6s ease both;
 }
+
+.contenedor-galeria figure:nth-child(1) { animation-delay: 0s; }
+.contenedor-galeria figure:nth-child(2) { animation-delay: 0.1s; }
+.contenedor-galeria figure:nth-child(3) { animation-delay: 0.2s; }
+.contenedor-galeria figure:nth-child(4) { animation-delay: 0.3s; }
+.contenedor-galeria figure:nth-child(5) { animation-delay: 0.4s; }
+.contenedor-galeria figure:nth-child(6) { animation-delay: 0.5s; }
 
 .contenedor-galeria figure:hover {
     transform: translateY(-4px);
@@ -639,16 +659,15 @@ tr:last-child td {
 
 .contenedor-galeria figure img {
     width: 100%;
-    height: auto;
+    height: 200px;
+    object-fit: cover;
+    object-position: center;
     display: block;
+    transition: transform 0.4s ease;
 }
 
-.contenedor-galeria figure figcaption {
-    padding: 0.8rem 1rem 1rem;
-    font-family: var(--texto);
-    font-size: clamp(0.8rem, 1.2vw, 0.95rem);
-    color: var(--carbon);
-    font-weight: 500;
+.contenedor-galeria figure:hover img {
+    transform: scale(1.05);
 }
 
 /* reseñas */
@@ -739,7 +758,7 @@ section > article p {
         grid-template-columns: 1fr;
     }
     .contenedor-galeria {
-        column-count: 2;
+        grid-template-columns: repeat(2, 1fr);
     }
     .contenedor-cifras {
         grid-template-columns: 1fr 1fr;
@@ -831,10 +850,11 @@ section > article p {
         grid-template-columns: repeat(4, 1fr);
     }
     .contenedor-galeria {
-        column-count: 3;
+        grid-template-columns: repeat(3, 1fr);
     }
     .perfil-egreso ol {
         columns: 2;
         column-gap: 2rem;
+
     }
 }
